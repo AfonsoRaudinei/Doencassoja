@@ -424,10 +424,11 @@
         
         <div class="info-box">
             <h3>📊 Sobre o Gráfico</h3>
-            <p><strong>Estádios Vegetativos (V2-V5):</strong> Predominância de crestamento bacteriano, míldio e início de oídio.</p>
-            <p><strong>Estádios Reprodutivos Iniciais (R1-R3):</strong> Pico de míldio, oídio e mofo branco, com aumento da ferrugem asiática.</p>
-            <p><strong>Enchimento de Grãos (R4-R8):</strong> Domínio da ferrugem asiática (até 95%) e doenças de final de ciclo como macrophomina, cercospora e mancha parda.</p>
-            <p><strong>Dados baseados em:</strong> Literatura técnica agronômica, relatórios de pesquisa e observações de campo (2022-2025).</p>
+            <p><strong>Estádios Vegetativos (V2-V5):</strong> Predominância de crestamento bacteriano, míldio, podridões radiculares (Phytophthora e Vermelha) e início de nematoides e oídio.</p>
+            <p><strong>Estádios Reprodutivos Iniciais (R1-R3):</strong> Pico de míldio, oídio e mofo branco, com aumento da ferrugem asiática, mancha alvo, cancro da haste e mela/requeima.</p>
+            <p><strong>Enchimento de Grãos (R4-R8):</strong> Domínio da ferrugem asiática (até 95%) e doenças de final de ciclo como macrophomina, cercospora, mancha parda, mancha alvo e cancro da haste.</p>
+            <p><strong>Total de doenças monitoradas:</strong> 17 principais doenças da cultura da soja (incluindo fungos, bactérias e nematoides).</p>
+            <p><strong>Dados baseados em:</strong> Literatura técnica agronômica, relatórios Embrapa, Fundação MT e observações de campo (2022-2025).</p>
         </div>
     </div>
     
@@ -439,61 +440,120 @@
                 name: 'Crestamento Bacteriano',
                 color: '#e74c3c',
                 data: [5, 10, 15, 18, 15, 10, 5, 3, 2, 1, 0, 0],
-                visible: true
+                visible: true,
+                info: 'Causada por bactérias, ataca folhas e caules. Predominante em estádios vegetativos (V2-V5), com pico em V5 (18%). Favorecida por alta umidade e temperaturas entre 23-27°C.'
             },
             {
                 name: 'Míldio',
                 color: '#3498db',
                 data: [8, 10, 12, 15, 20, 25, 20, 15, 10, 5, 3, 2],
-                visible: true
+                visible: true,
+                info: 'Doença fúngica que afeta principalmente folhas. Pico em R1-R2 (25%). Favorecida por alta umidade relativa e temperaturas amenas. Causa manchas amareladas na face superior das folhas.'
             },
             {
                 name: 'Oídio',
                 color: '#9b59b6',
                 data: [0.5, 1, 2, 5, 10, 20.25, 35, 50, 73.75, 85, 95, 98.75],
-                visible: true
+                visible: true,
+                info: 'Fungo que forma camada esbranquiçada sobre folhas, hastes e vagens. Intensidade crescente até R8 (98,75%). Comum em temperaturas amenas (18-24°C) e baixa umidade relativa. Pode causar perda de até 40% da produção.'
             },
             {
                 name: 'Pústula Bacteriana',
                 color: '#e67e22',
                 data: [1.5, 2, 3, 4, 10, 15, 12, 8, 5, 3, 2, 1],
-                visible: true
+                visible: true,
+                info: 'Doença bacteriana que forma pequenas pústulas nas folhas. Pico em R2 (15%). Disseminada por respingos de chuva e ventos. Mais comum em regiões com chuvas frequentes durante o desenvolvimento.'
             },
             {
                 name: 'Mofo Branco',
                 color: '#95a5a6',
                 data: [0, 0, 0, 0, 12, 20, 28, 45, 40, 30, 20, 15],
-                visible: true
+                visible: true,
+                info: 'Causado pelo fungo Sclerotinia sclerotiorum. Pico em R4 (45%), período crítico de floração até início de formação de vagens. Favorecido por alta umidade e temperaturas amenas. Forma estruturas de resistência (escleródios) no solo.'
             },
             {
                 name: 'Ferrugem Asiática',
                 color: '#c0392b',
                 data: [0, 0, 0, 0, 20, 35, 50, 65, 75, 85, 90, 95],
-                visible: true
+                visible: true,
+                info: 'A doença mais destrutiva da soja no Brasil (Phakopsora pachyrhizi). Pico em R6 (95%). Pode causar perdas de até 90% da produção. Forma urédias (pústulas) na face inferior das folhas, causando desfolha precoce e comprometendo formação dos grãos.'
             },
             {
                 name: 'Antracnose',
                 color: '#16a085',
                 data: [0, 0, 0, 0, 8, 12, 15, 12, 10, 8, 5, 3],
-                visible: true
+                visible: true,
+                info: 'Doença fúngica (Colletotrichum truncatum) muito comum no Cerrado. Pico em R3 (15%). Afeta folhas, hastes, vagens e sementes. Causa manchas marrons, vagens retorcidas e queda prematura. Favorecida por clima quente e úmido.'
             },
             {
-                name: 'Mancha Parda',
+                name: 'Mancha Parda (Septoriose)',
                 color: '#d35400',
                 data: [0, 0, 0, 0, 0, 2, 5, 8, 15, 30, 55, 85],
-                visible: true
+                visible: true,
+                info: 'Causada pelo fungo Septoria glycines. Doença de final de ciclo com pico em R8 (85%). Forma manchas angulares marrom-avermelhadas nas folhas, causando desfolha prematura e redução do peso dos grãos.'
             },
             {
-                name: 'Cercospora',
+                name: 'Cercospora (Crestamento Foliar)',
                 color: '#27ae60',
                 data: [0, 0, 0, 0, 0, 0, 2, 5, 15, 35, 55, 75],
-                visible: true
+                visible: true,
+                info: 'Fungo Cercospora kikuchii que ataca todos os órgãos da planta. Pico em R7 (75%). Causa pontuações escuras que se aglutinam formando manchas, levando a crestamento severo e desfolha prematura. Reduz peso dos grãos.'
             },
             {
-                name: 'Macrophomina',
+                name: 'Macrophomina (Podridão de Carvão)',
                 color: '#8e44ad',
                 data: [0, 0, 0, 0, 0, 0, 0, 5, 20, 45, 70, 85],
-                visible: true
+                visible: true,
+                info: 'Fungo de solo (Macrophomina phaseolina) que forma escleródios. Pico em R8 (85%). Ataca raízes e base do caule, causando murcha e morte prematura. Favorecida por estresse hídrico e altas temperaturas. Doença de difícil controle.'
+            },
+            {
+                name: 'Mancha Alvo',
+                color: '#2ecc71',
+                data: [0, 0, 0, 2, 8, 15, 25, 40, 55, 65, 70, 75],
+                visible: true,
+                info: 'Causada por Corynespora cassiicola. Pico em R8 (75%). Forma lesões circulares características com ponto escuro no centro (aspecto de alvo). Pode causar perdas de até 35%. Alta umidade favorece infecção foliar.'
+            },
+            {
+                name: 'Podridão Radicular (Phytophthora)',
+                color: '#34495e',
+                data: [15, 18, 20, 15, 10, 8, 5, 3, 2, 1, 0, 0],
+                visible: true,
+                info: 'Oomiceto que infecta raízes e pode causar damping-off. Pico em V3-V4 (18-20%). Destrói raízes secundárias e apodrece raiz principal. Causa morte de plântulas e murchamento. Favorecida por solos encharcados.'
+            },
+            {
+                name: 'Nematoides',
+                color: '#795548',
+                data: [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 55],
+                visible: true,
+                info: 'Parasitas de solo (destaque para Heterodera glycines e Pratylenchus brachyurus). Intensidade crescente ao longo do ciclo. Causam nanismo, clorose e redução na absorção de água/nutrientes. Prejuízos estimados em R$ 35 bilhões/ano no Brasil.'
+            },
+            {
+                name: 'Cancro da Haste',
+                color: '#e91e63',
+                data: [0, 0, 0, 5, 10, 15, 25, 35, 45, 55, 60, 50],
+                visible: true,
+                info: 'Causado por fungos Diaporthe/Phomopsis. Pico em R7 (60%). Afeta hastes, pecíolos e vagens, causando lesões necróticas. Pode levar à morte prematura de plantas e queda de vagens. Transmitido por sementes infectadas.'
+            },
+            {
+                name: 'Podridão Vermelha da Raiz',
+                color: '#b71c1c',
+                data: [8, 12, 15, 18, 20, 22, 25, 30, 35, 40, 38, 30],
+                visible: true,
+                info: 'Causada por espécies de Fusarium. Mancha avermelhada circunda a raiz 1-2 cm abaixo do solo, tornando-se castanho-escura. Solos compactados e mal drenados favorecem a doença. Aparece em reboleiras.'
+            },
+            {
+                name: 'Mela/Requeima (Rhizoctonia AG1)',
+                color: '#4a148c',
+                data: [0, 0, 0, 0, 5, 12, 20, 30, 35, 30, 20, 10],
+                visible: true,
+                info: 'Fungo Rhizoctonia solani AG1 altamente agressivo. Pico em R5 (35%). Ataca folhas, hastes e vagens em condições de alta umidade. Forma micélio branco característico. Difícil controle por formar escleródios resistentes.'
+            },
+            {
+                name: 'Mancha Olho-de-Rã',
+                color: '#00695c',
+                data: [0, 0, 0, 2, 5, 8, 12, 18, 25, 30, 28, 20],
+                visible: true,
+                info: 'Causada por Cercospora sojina. Forma manchas circulares com anéis concêntricos (aspecto de olho-de-rã). Pico em R6 (30%). Causa desfolha e redução da capacidade fotossintética. Mais severa em cultivares suscetíveis.'
             }
         ];
         
@@ -695,6 +755,56 @@
             }
         }
         
+        function updateInfoBox() {
+            const infoBox = document.querySelector('.info-box');
+            const selectedDiseases = diseases.filter(d => d.visible);
+            
+            if (selectedDiseases.length === 0) {
+                infoBox.innerHTML = `
+                    <h3>📊 Sobre o Gráfico</h3>
+                    <p style="color: #e74c3c; font-weight: bold;">Nenhuma doença selecionada. Selecione ao menos uma doença para visualizar informações.</p>
+                `;
+            } else if (selectedDiseases.length === 1) {
+                // Mostrar informação detalhada da única doença selecionada
+                const disease = selectedDiseases[0];
+                const maxValue = Math.max(...disease.data);
+                const maxIndex = disease.data.indexOf(maxValue);
+                const maxStage = stages[maxIndex];
+                
+                infoBox.innerHTML = `
+                    <h3>📊 ${disease.name}</h3>
+                    <p><strong>Pico de Intensidade:</strong> ${maxValue}% no estádio ${maxStage}</p>
+                    <p><strong>Descrição:</strong> ${disease.info}</p>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;"><em>💡 Dica: Selecione múltiplas doenças para comparar seus padrões de intensidade ao longo dos estádios.</em></p>
+                `;
+            } else if (selectedDiseases.length <= 5) {
+                // Mostrar lista resumida para até 5 doenças
+                let html = '<h3>📊 Doenças Selecionadas</h3>';
+                selectedDiseases.forEach(disease => {
+                    const maxValue = Math.max(...disease.data);
+                    const maxIndex = disease.data.indexOf(maxValue);
+                    const maxStage = stages[maxIndex];
+                    html += `
+                        <p style="margin-bottom: 10px;">
+                            <strong style="color: ${disease.color};">● ${disease.name}:</strong> 
+                            Pico de ${maxValue}% em ${maxStage}
+                        </p>
+                    `;
+                });
+                infoBox.innerHTML = html;
+            } else {
+                // Mostrar resumo geral para muitas doenças
+                infoBox.innerHTML = `
+                    <h3>📊 Sobre o Gráfico</h3>
+                    <p><strong>Estádios Vegetativos (V2-V5):</strong> Predominância de crestamento bacteriano, míldio, podridões radiculares (Phytophthora e Vermelha) e início de nematoides e oídio.</p>
+                    <p><strong>Estádios Reprodutivos Iniciais (R1-R3):</strong> Pico de míldio, oídio e mofo branco, com aumento da ferrugem asiática, mancha alvo, cancro da haste e mela/requeima.</p>
+                    <p><strong>Enchimento de Grãos (R4-R8):</strong> Domínio da ferrugem asiática (até 95%) e doenças de final de ciclo como macrophomina, cercospora, mancha parda, mancha alvo e cancro da haste.</p>
+                    <p><strong>Total selecionado:</strong> ${selectedDiseases.length} de 17 doenças monitoradas.</p>
+                    <p><strong>Dados baseados em:</strong> Literatura técnica agronômica, relatórios Embrapa, Fundação MT e observações de campo (2022-2025).</p>
+                `;
+            }
+        }
+        
         function toggleDisease(index) {
             const checkbox = document.getElementById(`disease-${index}`);
             const option = document.getElementById(`option-${index}`);
@@ -710,6 +820,7 @@
             updateSelectedTags();
             createChart();
             updateLegend();
+            updateInfoBox();
         }
         
         function selectAll() {
@@ -723,6 +834,7 @@
             updateSelectedTags();
             createChart();
             updateLegend();
+            updateInfoBox();
         }
         
         function clearAll() {
@@ -736,6 +848,7 @@
             updateSelectedTags();
             createChart();
             updateLegend();
+            updateInfoBox();
         }
         
         // Close dropdown when clicking outside
@@ -776,6 +889,7 @@
         createCheckboxes();
         createChart();
         updateLegend();
+        updateInfoBox();
     </script>
 </body>
 </html>
